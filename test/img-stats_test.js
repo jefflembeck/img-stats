@@ -34,7 +34,7 @@ exports['img-stats'] = {
     }, Error , 'Needs a filename.');
     test.done();
   },
-  'cat.png': function( test ){
+  'cat.png dimensions': function( test ){
     test.expect(2);
     img_stats.stats( process.cwd() + '/test/cat.png' , function( data ){
       test.equal( data.width , 100 , "Width should be 100" );
