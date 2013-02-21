@@ -21,15 +21,17 @@ var img_stats = require('../lib/img-stats.js');
     test.ifError(value)
 */
 
-exports['awesome'] = {
+exports['img-stats'] = {
   setUp: function(done) {
     // setup here
     done();
   },
-  'no args': function(test) {
+  'no args': function( test ) {
     test.expect(1);
     // tests here
-    test.equal(img_stats.awesome(), 'awesome', 'should be awesome.');
+    test.throws( function(){
+      img_stats.stats();
+    }, Error , 'Needs a filename.');
     test.done();
   }
 };
