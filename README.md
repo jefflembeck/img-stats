@@ -8,7 +8,10 @@ Install the module with: `npm install img-stats`
 
 ```javascript
 var img_stats = require('img-stats');
-img_stats.awesome(); // "awesome"
+img_stats.stats( '/path/to/img.png' , function( data ){
+  console.log(data.width); // 100
+  console.log(data.height); // 100
+  })
 ```
 
 ### In the browser
@@ -17,26 +20,7 @@ Download the [production version][min] or the [development version][max].
 [min]: https://raw.github.com/jlembeck/img-stats/master/dist/img-stats.min.js
 [max]: https://raw.github.com/jlembeck/img-stats/master/dist/img-stats.js
 
-In your web page:
 
-```html
-<script src="dist/img-stats.min.js"></script>
-<script>
-awesome(); // "awesome"
-</script>
-```
-
-In your code, you can attach img-stats's methods to any object.
-
-```html
-<script>
-this.exports = Bocoup.utils;
-</script>
-<script src="dist/img-stats.min.js"></script>
-<script>
-Bocoup.utils.awesome(); // "awesome"
-</script>
-```
 
 ## Documentation
 _(Coming soon)_
