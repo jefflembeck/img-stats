@@ -1,4 +1,4 @@
-/*global require:true */
+/*global require:true, process:true, console: true*/
 var img_stats = require('../lib/img-stats.js');
 
 /*
