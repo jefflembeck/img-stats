@@ -41,5 +41,13 @@ exports['img-stats'] = {
       test.equal( data.height , 100 , "Height should be 100" );
       test.done();
     });
+  },
+  'file is not png' : function( test ){
+    test.expect(1);
+    test.throws( function(){
+      img_stats.stats( process.cwd() + '/test/starfish.jpg' , function( data ){
+      });
+    }, Error , "File must be in .png format." );
+    test.done();
   }
 };
