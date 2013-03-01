@@ -34,6 +34,13 @@ exports['img-stats'] = {
     }, Error , 'Needs a filename.');
     test.done();
   },
+  'cat.png is a png': function( test ){
+    test.expect(1);
+    img_stats.stats( process.cwd() + '/test/cat.png' , function( data ){
+      test.equal( data.type , 'PNG' , "Cat should be a png" );
+      test.done();
+    });
+  },
   'cat.png dimensions': function( test ){
     test.expect(2);
     img_stats.stats( process.cwd() + '/test/cat.png' , function( data ){
@@ -42,12 +49,11 @@ exports['img-stats'] = {
       test.done();
     });
   },
-  'file is not png' : function( test ){
+  'bear.svg is a SVG': function( test ){
     test.expect(1);
-    test.throws( function(){
-      img_stats.stats( process.cwd() + '/test/starfish.jpg' , function( data ){
-      });
-    }, Error , "File must be in .png format." );
-    test.done();
+    img_stats.stats( process.cwd() + '/test/bear.svg' , function( data ){
+      test.equal( data.type , "SVG" , "Bear should be an SVG" );
+      test.done();
+    });
   }
 };

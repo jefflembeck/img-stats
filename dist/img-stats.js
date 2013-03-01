@@ -1,10 +1,6 @@
-/*
- * img-stats
- * https://github.com/jlembeck/img-stats
- *
- * Copyright (c) 2013 Jeffrey Lembeck
- * Licensed under the MIT license.
- */
+/*! img-stats - v0.1.0 - 2013-02-28
+* https://github.com/jlembeck/img-stats
+* Copyright (c) 2013 Jeffrey Lembeck; Licensed MIT */
 
 /*global require:true, console:true*/
 
