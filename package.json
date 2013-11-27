@@ -1,13 +1,9 @@
 {
   "name": "img-stats",
   "description": "Grabs stats of the image you feed it",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "https://github.com/jlembeck/img-stats",
-  "author": {
-    "name": "Jeffrey Lembeck",
-    "email": "jlembeck@gmail.com",
-    "url": "http://www.jefflembeck.com"
-  },
+  "author": "Jeffrey Lembeck <jlembeck@gmail.com> (http://www.jefflembeck.com)",
   "repository": {
     "type": "git",
     "url": "git://github.com/jlembeck/img-stats.git"
@@ -23,16 +19,23 @@
   ],
   "main": "lib/img-stats",
   "engines": {
-    "node": "*"
+    "node": "~0.8"
   },
   "scripts": {
     "test": "grunt test"
   },
   "dependencies": {
-    "grunt": "~0.3.10"
+    "grunt": "~0.3.10",
+    "xmldom": "0.1.16"
   },
   "devDependencies": {
     "grunt": "~0.3.10"
   },
-  "keywords": []
+  "keywords": [],
+  "gitHead": "6bf352f33430c8ba7120e90bed36db91dee9dc00",
+  "readmeFilename": "README.md",
+  "directories": {
+    "test": "test"
+  },
+  "license": "MIT"
 }

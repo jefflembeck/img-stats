@@ -55,5 +55,11 @@ exports['img-stats'] = {
       test.equal( data.type , "SVG" , "Bear should be an SVG" );
       test.done();
     });
+  },
+  'bear.svg dimensions': function( test ){
+    test.expect(1);
+    var data = img_stats.statsSync( process.cwd() + '/test/bear.svg' );
+    test.equal( data.width , "100px" , "Bear width should be 100px" );
+    test.done();
   }
 };
