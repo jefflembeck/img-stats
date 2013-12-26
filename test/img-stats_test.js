@@ -49,6 +49,13 @@ exports['img-stats'] = {
       test.done();
     });
   },
+  'cat.png dimensions Sync': function( test ){
+    test.expect(2);
+    var data = img_stats.statsSync( process.cwd() + '/test/cat.png' );
+    test.equal( data.width , 100 , "Width should be 100" );
+    test.equal( data.height , 100 , "Height should be 100" );
+    test.done();
+  },
   'bear.svg is a SVG': function( test ){
     test.expect(1);
     img_stats.stats( process.cwd() + '/test/bear.svg' , function( data ){
@@ -56,7 +63,7 @@ exports['img-stats'] = {
       test.done();
     });
   },
-  'bear.svg dimensions': function( test ){
+  'bear.svg dimensions sync': function( test ){
     test.expect(1);
     var data = img_stats.statsSync( process.cwd() + '/test/bear.svg' );
     test.equal( data.width , "100px" , "Bear width should be 100px" );
