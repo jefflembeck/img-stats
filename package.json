@@ -1,7 +1,7 @@
 {
   "name": "img-stats",
   "description": "Grabs stats of the image you feed it",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "homepage": "https://github.com/jlembeck/img-stats",
   "author": "Jeffrey Lembeck <jlembeck@gmail.com> (http://www.jefflembeck.com)",
   "repository": {
