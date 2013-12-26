@@ -37,39 +37,38 @@
       }, Error , 'Needs a filename.');
       test.done();
     },
-    'cat.png is a png': function( test ){
-      test.expect(1);
-      img_stats.stats( process.cwd() + '/test/cat.png' , function( data ){
+    'cat.png async': function( test ){
+      test.expect(3);
+      img_stats.stats( process.cwd() + '/test/files/cat.png' , function( data ){
+        test.equal( data.width , 100 , "Width should be 100" );
+        test.equal( data.height , 100 , "Height should be 100" );
         test.equal( data.type , 'PNG' , "Cat should be a png" );
         test.done();
       });
     },
-    'cat.png dimensions': function( test ){
-      test.expect(2);
-      img_stats.stats( process.cwd() + '/test/cat.png' , function( data ){
-        test.equal( data.width , 100 , "Width should be 100" );
-        test.equal( data.height , 100 , "Height should be 100" );
-        test.done();
-      });
-    },
-    'cat.png dimensions Sync': function( test ){
-      test.expect(2);
-      var data = img_stats.statsSync( process.cwd() + '/test/cat.png' );
+    'cat.png Sync': function( test ){
+      test.expect(3);
+      var data = img_stats.statsSync( process.cwd() + '/test/files/cat.png' );
       test.equal( data.width , 100 , "Width should be 100" );
       test.equal( data.height , 100 , "Height should be 100" );
+      test.equal( data.type , 'PNG' , "Cat should be a png" );
       test.done();
     },
-    'bear.svg is a SVG': function( test ){
-      test.expect(1);
-      img_stats.stats( process.cwd() + '/test/bear.svg' , function( data ){
+    'bear.svg async': function( test ){
+      test.expect(3);
+      img_stats.stats( process.cwd() + '/test/files/bear.svg' , function( data ){
+        test.equal( data.width , "100" , "Bear width should be 100" );
+        test.equal( data.height , "62.905" , "Bear height should be 100" );
         test.equal( data.type , "SVG" , "Bear should be an SVG" );
         test.done();
       });
     },
-    'bear.svg dimensions sync': function( test ){
-      test.expect(1);
-      var data = img_stats.statsSync( process.cwd() + '/test/bear.svg' );
-      test.equal( data.width , "100px" , "Bear width should be 100px" );
+    'bear.svg sync': function( test ){
+      test.expect(3);
+      var data = img_stats.statsSync( process.cwd() + '/test/files/bear.svg' );
+      test.equal( data.width , "100" , "Bear width should be 100" );
+      test.equal( data.height , "62.905" , "Bear height should be 100" );
+      test.equal( data.type , "SVG" , "Bear should be an SVG" );
       test.done();
     }
   };
