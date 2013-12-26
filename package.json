@@ -25,11 +25,12 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "grunt": "~0.3.10",
     "xmldom": "0.1.16"
   },
   "devDependencies": {
-    "grunt": "~0.3.10"
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-nodeunit": "~0.1.2"
   },
   "keywords": [],
   "gitHead": "6bf352f33430c8ba7120e90bed36db91dee9dc00",
