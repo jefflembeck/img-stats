@@ -70,6 +70,14 @@
       test.equal( data.height , "62.905" , "Bear height should be 100" );
       test.equal( data.type , "SVG" , "Bear should be an SVG" );
       test.done();
+    },
+    'bear-2.svg sync': function( test ){
+      test.expect(3);
+      var data = img_stats.statsSync( process.cwd() + '/test/files/bear-2.svg' );
+      test.equal( data.width , "100" , "Bear width should be 100" );
+      test.equal( data.height , "62.905" , "Bear height should be 100" );
+      test.equal( data.type , "SVG" , "Bear should be an SVG" );
+      test.done();
     }
   };
 }(typeof exports === 'object' && exports || this));
