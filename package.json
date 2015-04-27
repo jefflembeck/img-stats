@@ -1,7 +1,7 @@
 {
   "name": "img-stats",
   "description": "Grabs stats of the image you feed it",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "homepage": "https://github.com/jlembeck/img-stats",
   "author": "Jeffrey Lembeck <jlembeck@gmail.com> (http://www.jefflembeck.com)",
   "repository": {
@@ -28,9 +28,9 @@
     "xmldom": "0.1.16"
   },
   "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-contrib-jshint": "~0.1.1",
-    "grunt-contrib-nodeunit": "~0.1.2"
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-nodeunit": "^0.4.1"
   },
   "keywords": [],
   "gitHead": "6bf352f33430c8ba7120e90bed36db91dee9dc00",
